@@ -13,11 +13,13 @@ def getInput():
 #CheckNum function that checks guess against target number.
 def checkNum(userNum, targetNum):
     if userNum < targetNum:
-        return "Your Number is too low."
+        msg = "Your Number is too low."
     if userNum > targetNum:
-        return "Your number is too high."
+        msg = "Your number is too high."
     if userNum == targetNum:
-        return "You got it!"
+        msg = "You got it!"
+    print (msg)
+    return msg
 
 #Function that loops 5 times.
 def gameLoop(): 
@@ -27,12 +29,12 @@ def gameLoop():
         gameNum= gameNum-1
         userNum = getInput()
 
-        if checkNum(userNum, targetNum) == "You got it!":
-           print("Congratulations, you won!")
-           break
-        else:
-            print("Sorry, wrong number. Let's try again.")
+        if checkNum(userNum, targetNum) != "You got it!":
             print("You have", gameNum, "more tries.")
+           
+        else:
+            print("Congratulations, you won!")
+            break
             
     if gameNum == 0:
         print("Sorry, you ran out of tries.")
