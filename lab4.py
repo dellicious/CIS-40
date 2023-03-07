@@ -5,11 +5,14 @@
 
 
 #Part 1
-palindromechk = ["seve!n", "racecar"]
-for word in palindromechk:
-    if word != "," or "." or "?" or "!" or '"' or "'":
-        if word() == word[-1]:
-            print(True)
+palindrome = input("Please input a word\n")
+palReverse = palindrome[::-1] 
+
+print(palindrome)
+if palindrome == palReverse:
+    print(True)
+if palindrome != palReverse:
+    print(False)
 
 
 #Part2
