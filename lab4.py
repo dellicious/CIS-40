@@ -9,27 +9,40 @@ palindrome = input("Please input a word\n")
 palReverse = palindrome[::-1]
 
 print(palindrome)
-punc = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+punc = ''' !()-[]{};:'"\,<>./?@#$%^&*_~'''
 for x in palindrome:
     if x in punc:
         palindrome=palindrome.replace(x,"")
         palReverse=palindrome[::-1]
+capital = '''ABCDEFGHIJKLMNOPQRSTUVWXYZ'''
+for x in palindrome:
+    if x in capital:
+        palindrome=palindrome.lower()
+        palReverse=palindrome[::-1]
+        palReverse=palReverse.lower()
         
 if palindrome == palReverse:
     print(True)
 if palindrome != palReverse:
     print(False)
 
+
 #ex1
 palindrome = "Hello"
 palReverse = palindrome[::-1]
 
 print(palindrome)
-punc = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+punc = ''' !()-[]{};:'"\,<>./?@#$%^&*_~'''
 for x in palindrome:
     if x in punc:
         palindrome=palindrome.replace(x,"")
         palReverse=palindrome[::-1]
+capital = '''ABCDEFGHIJKLMNOPQRSTUVWXYZ'''
+for x in palindrome:
+    if x in capital:
+        palindrome=palindrome.lower()
+        palReverse=palindrome[::-1]
+        palReverse=palReverse.lower()
         
 if palindrome == palReverse:
     print(True)
@@ -41,11 +54,17 @@ palindrome = "r!acecar"
 palReverse = palindrome[::-1]
 
 print(palindrome)
-punc = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+punc = ''' !()-[]{};:'"\,<>./?@#$%^&*_~'''
 for x in palindrome:
     if x in punc:
         palindrome=palindrome.replace(x,"")
         palReverse=palindrome[::-1]
+capital = '''ABCDEFGHIJKLMNOPQRSTUVWXYZ'''
+for x in palindrome:
+    if x in capital:
+        palindrome=palindrome.lower()
+        palReverse=palindrome[::-1]
+        palReverse=palReverse.lower()
         
 if palindrome == palReverse:
     print(True)
@@ -61,10 +80,8 @@ response=0
 
 while response != "n":
     response= input("Please enter an interger, or 'n' to quit.")
-    print(numList)
     if response != "n":
         numList.append(int(response))
-        print(numList)
 print("List Input:",numList)
 numList.insert(0,numList[-1])
 numList.pop()
