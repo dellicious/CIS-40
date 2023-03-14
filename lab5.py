@@ -16,4 +16,5 @@ NewTime.hours = input("Please enter the hours.")
 NewTime.minutes = input("Please enter the minutes.")
 NewTime.seconds = input("Please enter the seconds.")
 
-print(f'The new time is:{NewTime.hours}':,f'{NewTime.minutes}':,f'{NewTime.seconds}')
+print(f'The new time is:{NewTime.hours}:',f'{NewTime.minutes}:',f'{NewTime.seconds}:')
+
